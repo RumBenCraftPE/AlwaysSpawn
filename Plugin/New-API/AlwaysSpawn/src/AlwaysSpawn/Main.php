@@ -6,6 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\level\Level;
+use pocketmine\level\Position;
 use pocketmine\entity\Entity;
 use pocketmine\Player;
 
