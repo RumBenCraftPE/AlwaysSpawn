@@ -3,7 +3,7 @@
 __PocketMine Plugin__
 name=AlwaysSpawn
 description=Force your users to automaticaly spawn every time they login!
-version=2.0.2
+version=2.0.3
 author=Comedyman937
 class=AlwaysSpawn
 apiversion=6,7,8,9,10,11,12
@@ -43,8 +43,7 @@ class AlwaysSpawn implements Plugin{
 		    $ZPos=$this->config->get('Z');
 		    $Level=$this->config->get('spawnWorld');
 		    $username=$data;
-		    $spawn=new Position($XPos, $YPos, $ZPos, $Level);
-		    $this->api->player->teleport($username, $spawn);
+		    $this->api->player->teleport($username, $XPos, $YPos, $ZPos, $Level);
 		break;
 	    }
 	}elseif($enableConf=false){
