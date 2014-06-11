@@ -1,4 +1,4 @@
-<php
+<?php
 
 namespace AlwaysSpawn;
 
@@ -32,3 +32,4 @@ class Main extends PluginBase implements Listener{
         $this->getLogger()->log("[INFO] AlwaysSpawn Unloaded!");
     }
 }
+?>
