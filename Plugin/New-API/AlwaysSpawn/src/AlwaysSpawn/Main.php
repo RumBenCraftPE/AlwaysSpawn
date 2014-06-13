@@ -17,6 +17,12 @@ class Main extends PluginBase implements Listener, CommandExecutor{
 
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $config = $this->getConfig();
+        $this->enableConf = $config->get("enableConf");
+        $this->X = $config->get("X");
+        $this->Y = $config->get("Y");
+        $this->Z = $config->get("Z");
+        $this->Level = $config->get("Level");
         $this->getLogger()->log("[INFO] AlwaysSpawn Loaded!");
     }
     
