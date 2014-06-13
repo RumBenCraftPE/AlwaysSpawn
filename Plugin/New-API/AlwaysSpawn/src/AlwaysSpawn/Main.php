@@ -24,9 +24,20 @@ class Main extends PluginBase implements Listener, CommandExecutor{
         switch($cmd->getName()){
             case "alwaysspawn":
                 if($args[0] == "set"){
-                    //TODO Set position in config
+                    $player = $sender->getEntity();
+                    $X = $player->getFloorX();
+                    $Y = $player->getFloorY();
+                    $Z = $player->getFloorZ();
+                    $Level = $player->getLevel()->getName(); //Maybe? Ill test it later.
+                    //TODO Save info
                 }elseif($args[0] == "location"){
-                    //TODO Show player his/her location
+                    //Not sure if the following will work!
+                    $player = $sender->getEntity();
+                    $X = $player->getFloorX();
+                    $Y = $player->getFloorY();
+                    $Z = $player->getFloorZ();
+                    $Level = $player->getLevel()->getName(); //Maybe? Ill test it later.
+                    $sender->sendMessage("[AlwaysSpawn] Your location is:\nX: " . $X . "\nY: " . $Y . "\nZ: " . $Z . "\nLevel: " . $Level);
                 }else{
                     $sender->sendMessage("[AlwaysSpawn] Command Not Found!");
                     $sender->sendMessage("Usage: /alwaysspawn <set|location>");
