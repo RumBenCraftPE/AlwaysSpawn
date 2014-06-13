@@ -3,6 +3,9 @@
 namespace AlwaysSpawn;
 
 use pocketmine\plugin\PluginBase;
+//use pocketmine\command\Command;
+//use pocketmine\command\CommandExecutor;
+//use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\level\Level;
@@ -16,6 +19,20 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->log("[INFO] AlwaysSpawn Loaded!");
     }
+    
+    //public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
+        //switch($cmd->getName()){
+            //case "alwaysspawn":
+                //if($args[0] == "set"){
+                    //TODO Set position in config
+                //}elseif($args[0] == "location"){
+                    //TODO Show player his/her location
+                //}else{
+                    //$sender->sendMessage("[AlwaysSpawn] Command Not Found!");
+                    //$sender->sendMessage("Usage: /alwaysspawn <set|location>");
+                //}
+            //break;
+     //}
     
     /**
      * @param PlayerJoinEvent $event
