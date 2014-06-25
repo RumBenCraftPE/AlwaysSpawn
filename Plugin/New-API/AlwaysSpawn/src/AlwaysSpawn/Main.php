@@ -44,6 +44,7 @@ class Main extends PluginBase implements Listener, CommandExecutor{
 						$this->getConfig()->set("Z", $Z);
 						$this->getConfig()->set("Level", $Level);
 						$this->getConfig()->set("enableConf", true);
+						$this->getConfig()->save();
 						$sender->sendMessage("[AlwaysSpawn] Set login spawn location to you current position!");
 						return true;
 					}
@@ -89,6 +90,7 @@ class Main extends PluginBase implements Listener, CommandExecutor{
     }
     
     public function onDisable(){
+    	$this->getConfig()->save();
         $this->getLogger()->info("[INFO] AlwaysSpawn Unloaded!");
     }
 }
