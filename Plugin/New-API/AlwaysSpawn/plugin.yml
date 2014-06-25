@@ -16,4 +16,4 @@ commands:
 permissions:
     alwaysspawn.command.alwaysspawn:
         description: "Allows players to view their location and edit the AlwaysSpawn config!"
-        default: false
+        default: op
