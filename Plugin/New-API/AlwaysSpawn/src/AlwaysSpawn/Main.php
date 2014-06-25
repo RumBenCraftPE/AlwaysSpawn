@@ -91,7 +91,7 @@ class Main extends PluginBase implements Listener, CommandExecutor{
     
     public function onDisable(){
     	$this->getConfig()->save();
-        $this->getLogger()->info("[INFO] AlwaysSpawn Unloaded!");
+        $this->getLogger()->info("AlwaysSpawn Unloaded!");
     }
 }
 ?>
