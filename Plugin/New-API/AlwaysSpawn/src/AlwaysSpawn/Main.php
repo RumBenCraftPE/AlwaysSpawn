@@ -75,7 +75,7 @@ class Main extends PluginBase implements Listener, CommandExecutor{
      * @ignoreCanceled false
      */
     public function onSpawn(PlayerJoinEvent $event){
-		$enableConf = $this->getConfig()->get("enableConf");
+	$enableConf = $this->getConfig()->get("enableConf");
         $X = $this->getConfig()->get("X");
         $Y = $this->getConfig()->get("Y");
         $Z = $this->getConfig()->get("Z");
