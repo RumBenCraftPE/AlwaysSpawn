@@ -35,9 +35,9 @@ class Main extends PluginBase implements Listener, CommandExecutor{
 			return true;
 		    }else{
 			$player = $sender->getName();
-			$X = $player->getFloorX();
-			$Y = $player->getFloorY();
-			$Z = $player->getFloorZ();
+			$X = $sender->getFloorX();
+			$Y = $sender->getFloorY();
+			$Z = $sender->getFloorZ();
 			$Level = $player->getLevel()->getName();
 			$this->getConfig()->set("X", $X);
 			$this->getConfig()->set("Y", $y);
@@ -53,10 +53,10 @@ class Main extends PluginBase implements Listener, CommandExecutor{
 			$sender->sendMessage("[AlwaysSpawn] You can only use AlwaysSpawn while in-game!");
 			return true;
 		    }else{
-			$player = $sender->getEntity();
-			$X = $player->getFloorX();
-			$Y = $player->getFloorY();
-			$Z = $player->getFloorZ();
+			$player = $sender->getName();
+			$X = $sender->getFloorX();
+			$Y = $sender->getFloorY();
+			$Z = $sender->getFloorZ();
 			$Level = $player->getLevel()->getName();
 			$sender->sendMessage("[AlwaysSpawn] Your location is:\nX: " . $X . "\nY: " . $Y . "\nZ: " . $Z . "\nLevel: " . $Level);
 			return true;
