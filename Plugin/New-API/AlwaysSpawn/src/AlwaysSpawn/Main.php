@@ -34,7 +34,7 @@ class Main extends PluginBase implements Listener, CommandExecutor{
 			$sender->sendMessage("[AlwaysSpawn] You can only use AlwaysSpawn while in-game!");
 			return true;
 		    }else{
-			$player = $sender->getEntity();
+			$player = $sender->getName();
 			$X = $player->getFloorX();
 			$Y = $player->getFloorY();
 			$Z = $player->getFloorZ();
