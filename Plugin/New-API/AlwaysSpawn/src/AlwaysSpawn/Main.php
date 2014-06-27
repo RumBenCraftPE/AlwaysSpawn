@@ -34,11 +34,10 @@ class Main extends PluginBase implements Listener, CommandExecutor{
 			$sender->sendMessage("[AlwaysSpawn] You can only use AlwaysSpawn while in-game!");
 			return true;
 		    }else{
-			$player = $sender->getName();
 			$X = $sender->getFloorX();
 			$Y = $sender->getFloorY();
 			$Z = $sender->getFloorZ();
-			$Level = $player->getLevel()->getName();
+			$Level = $sender->getLevel()->getName();
 			$this->getConfig()->set("X", $X);
 			$this->getConfig()->set("Y", $y);
 			$this->getConfig()->set("Z", $Z);
@@ -53,11 +52,10 @@ class Main extends PluginBase implements Listener, CommandExecutor{
 			$sender->sendMessage("[AlwaysSpawn] You can only use AlwaysSpawn while in-game!");
 			return true;
 		    }else{
-			$player = $sender->getName();
 			$X = $sender->getFloorX();
 			$Y = $sender->getFloorY();
 			$Z = $sender->getFloorZ();
-			$Level = $player->getLevel()->getName();
+			$Level = $sender->getLevel()->getName();
 			$sender->sendMessage("[AlwaysSpawn] Your location is:\nX: " . $X . "\nY: " . $Y . "\nZ: " . $Z . "\nLevel: " . $Level);
 			return true;
 		    }
@@ -85,7 +83,7 @@ class Main extends PluginBase implements Listener, CommandExecutor{
 	if($enableConf === false){
 	    $player->teleport($this->getServer()->getDefaultLevel()->getSpawn());
 	}else{
-	    $player->teleport(new Vector3($X, $Y, $Z, $Level));
+	    $player->teleport(new Vector3($X, $Y+4, $Z, $Level));
 	}
     }
     
