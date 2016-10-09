@@ -81,7 +81,7 @@ class Main extends PluginBase implements Listener, CommandExecutor{
         $Level = $this->getConfig()->get("Level");
 	$player = $event->getPlayer();
 	if($enableConf === false){
-	    $player->teleport($this->getServer()->getDefaultLevel()->getSpawn());
+	    $player->teleport($this->getServer()->getDefaultLevel()->getSafeSpawn());
 	}else{
 	    $player->teleport(new Vector3($X, $Y+4, $Z, $Level));
 	}
